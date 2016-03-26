@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F34775F8D067C9D6BB2DFA4 /* Pods_uliuli_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A142C2531AE2AFF4BF543A46 /* Pods_uliuli_app.framework */; };
 		924F49B11CA64D72001ED9DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B01CA64D72001ED9DC /* AppDelegate.swift */; };
 		924F49B31CA64D72001ED9DC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B21CA64D72001ED9DC /* FirstViewController.swift */; };
 		924F49B51CA64D72001ED9DC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B41CA64D72001ED9DC /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061835410B826A526F34246D /* Pods-uliuli-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uliuli-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app.debug.xcconfig"; sourceTree = "<group>"; };
 		924F49AD1CA64D72001ED9DC /* uliuli-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uliuli-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		924F49B01CA64D72001ED9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924F49B21CA64D72001ED9DC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		924F49CE1CA64D72001ED9DC /* uliuli-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "uliuli-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		924F49D21CA64D72001ED9DC /* uliuli_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uliuli_appUITests.swift; sourceTree = "<group>"; };
 		924F49D41CA64D73001ED9DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A142C2531AE2AFF4BF543A46 /* Pods_uliuli_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uliuli_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B424C7792AD9098568BA729D /* Pods-uliuli-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uliuli-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F34775F8D067C9D6BB2DFA4 /* Pods_uliuli_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4162A25C5D812FE3BAF12CA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A142C2531AE2AFF4BF543A46 /* Pods_uliuli_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		924F49A41CA64D72001ED9DC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,8 @@
 				924F49C61CA64D72001ED9DC /* uliuli-appTests */,
 				924F49D11CA64D72001ED9DC /* uliuli-appUITests */,
 				924F49AE1CA64D72001ED9DC /* Products */,
+				92EE2784D8908B7010AE6ACB /* Pods */,
+				4162A25C5D812FE3BAF12CA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +143,15 @@
 			path = "uliuli-appUITests";
 			sourceTree = "<group>";
 		};
+		92EE2784D8908B7010AE6ACB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				061835410B826A526F34246D /* Pods-uliuli-app.debug.xcconfig */,
+				B424C7792AD9098568BA729D /* Pods-uliuli-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 924F49D71CA64D73001ED9DC /* Build configuration list for PBXNativeTarget "uliuli-app" */;
 			buildPhases = (
+				20931111A3265B27078D78B6 /* Check Pods Manifest.lock */,
 				924F49A91CA64D72001ED9DC /* Sources */,
 				924F49AA1CA64D72001ED9DC /* Frameworks */,
 				924F49AB1CA64D72001ED9DC /* Resources */,
+				49906D0772FE895D1C4A4592 /* Embed Pods Frameworks */,
+				3E9CE63C9716EC202D465F89 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20931111A3265B27078D78B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E9CE63C9716EC202D465F89 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49906D0772FE895D1C4A4592 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		924F49A91CA64D72001ED9DC /* Sources */ = {
@@ -401,6 +476,7 @@
 		};
 		924F49D81CA64D73001ED9DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061835410B826A526F34246D /* Pods-uliuli-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "uliuli-app/Info.plist";
@@ -412,6 +488,7 @@
 		};
 		924F49D91CA64D73001ED9DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B424C7792AD9098568BA729D /* Pods-uliuli-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "uliuli-app/Info.plist";
@@ -488,6 +565,7 @@
 				924F49D91CA64D73001ED9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924F49DA1CA64D73001ED9DC /* Build configuration list for PBXNativeTarget "uliuli-appTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +574,7 @@
 				924F49DC1CA64D73001ED9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924F49DD1CA64D73001ED9DC /* Build configuration list for PBXNativeTarget "uliuli-appUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +583,7 @@
 				924F49DF1CA64D73001ED9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
