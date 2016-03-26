@@ -29,11 +29,10 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
   }
 
   func addDummyData() {
-    ApiClient.sharedInstance.getRandomUser { (json: JSON) in
-      if let results = json["results"].array {
-        for entry in results {
-          self.items.append(User(json: entry["user"]))
-        }
+    ApiClient.sharedInstance.getRandomUser { (user: User?) in
+      if (user != nil) {
+        self.items.append(user!)
+
         dispatch_async(dispatch_get_main_queue(),{
           self.tableView.reloadData()
         })
