@@ -10,15 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
 
     let defaults = NSUserDefaults.standardUserDefaults()
-    if let foo = defaults.objectForKey("currentUser") {
-      print("saved value are: \(foo)")
+    if let user = defaults.objectForKey("currentUser") {
+      print("saved value are: \(user)")
+      // TODO: investigate why this won't work if it's inside viewDidLoad() method
       performSegueWithIdentifier("Logged In", sender: self)
-    } else {
-      print("ok")
     }
   }
 
