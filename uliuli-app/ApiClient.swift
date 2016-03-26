@@ -15,7 +15,8 @@ typealias PostsResponse = ([Post]?) -> Void
 class ApiClient: NSObject {
   static let sharedInstance = ApiClient()
 
-  let baseURL = "http://localhost:3002/api/v1/posts"
+//  let baseURL = "http://localhost:3002/api/v1/posts"
+  let baseURL = "http://uliuli.kinopyo.com/api/v1/posts"
 
   func getPosts(onComplete: PostsResponse) {
     Alamofire.request(.GET, baseURL).responseJSON { response in
