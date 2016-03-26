@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   @IBOutlet weak var tableView: UITableView!
   var items = [Post]()

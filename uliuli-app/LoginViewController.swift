@@ -14,8 +14,11 @@ class LoginViewController: UIViewController {
     super.viewDidLoad()
 
     let defaults = NSUserDefaults.standardUserDefaults()
-    if (defaults.objectForKey("currentUser") != nil) {
-      performSegueWithIdentifier("Logged In", sender: nil)
+    if let foo = defaults.objectForKey("currentUser") {
+      print("saved value are: \(foo)")
+      performSegueWithIdentifier("Logged In", sender: self)
+    } else {
+      print("ok")
     }
   }
 

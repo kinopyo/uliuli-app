@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F34775F8D067C9D6BB2DFA4 /* Pods_uliuli_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A142C2531AE2AFF4BF543A46 /* Pods_uliuli_app.framework */; };
 		924F49B11CA64D72001ED9DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B01CA64D72001ED9DC /* AppDelegate.swift */; };
-		924F49B31CA64D72001ED9DC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B21CA64D72001ED9DC /* FirstViewController.swift */; };
+		924F49B31CA64D72001ED9DC /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B21CA64D72001ED9DC /* PhotosViewController.swift */; };
 		924F49B51CA64D72001ED9DC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49B41CA64D72001ED9DC /* SecondViewController.swift */; };
 		924F49B81CA64D72001ED9DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924F49B61CA64D72001ED9DC /* Main.storyboard */; };
 		924F49BA1CA64D72001ED9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924F49B91CA64D72001ED9DC /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 		061835410B826A526F34246D /* Pods-uliuli-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uliuli-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app.debug.xcconfig"; sourceTree = "<group>"; };
 		924F49AD1CA64D72001ED9DC /* uliuli-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uliuli-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		924F49B01CA64D72001ED9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		924F49B21CA64D72001ED9DC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		924F49B21CA64D72001ED9DC /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		924F49B41CA64D72001ED9DC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		924F49B71CA64D72001ED9DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		924F49B91CA64D72001ED9DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,12 +124,10 @@
 		924F49AF1CA64D72001ED9DC /* uliuli-app */ = {
 			isa = PBXGroup;
 			children = (
-				929FA7DD1CA67766002189F4 /* Model */,
+				929A5C7C1CA6AD5500A20D8B /* Controllers */,
+				929FA7DD1CA67766002189F4 /* Models */,
 				924F49B01CA64D72001ED9DC /* AppDelegate.swift */,
-				924F49B21CA64D72001ED9DC /* FirstViewController.swift */,
-				924F49B41CA64D72001ED9DC /* SecondViewController.swift */,
 				924F49B61CA64D72001ED9DC /* Main.storyboard */,
-				929FA7E21CA69DFB002189F4 /* LoginViewController.swift */,
 				929FA7E01CA684CA002189F4 /* photoCell.swift */,
 				924F49B91CA64D72001ED9DC /* Assets.xcassets */,
 				924F49BB1CA64D72001ED9DC /* LaunchScreen.storyboard */,
@@ -156,14 +154,24 @@
 			path = "uliuli-appUITests";
 			sourceTree = "<group>";
 		};
-		929FA7DD1CA67766002189F4 /* Model */ = {
+		929A5C7C1CA6AD5500A20D8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				924F49B41CA64D72001ED9DC /* SecondViewController.swift */,
+				924F49B21CA64D72001ED9DC /* PhotosViewController.swift */,
+				929FA7E21CA69DFB002189F4 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		929FA7DD1CA67766002189F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				92525C4C1CA6530A00329A2A /* User.swift */,
 				929FA7DE1CA6777C002189F4 /* Post.swift */,
 				92E14E341CA6505F00796D69 /* ApiClient.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		92EE2784D8908B7010AE6ACB /* Pods */ = {
@@ -360,7 +368,7 @@
 				924F49B51CA64D72001ED9DC /* SecondViewController.swift in Sources */,
 				929FA7E11CA684CA002189F4 /* photoCell.swift in Sources */,
 				924F49B11CA64D72001ED9DC /* AppDelegate.swift in Sources */,
-				924F49B31CA64D72001ED9DC /* FirstViewController.swift in Sources */,
+				924F49B31CA64D72001ED9DC /* PhotosViewController.swift in Sources */,
 				929FA7DF1CA6777C002189F4 /* Post.swift in Sources */,
 				92525C4D1CA6530A00329A2A /* User.swift in Sources */,
 				929FA7E31CA69DFB002189F4 /* LoginViewController.swift in Sources */,
