@@ -24,8 +24,16 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     let btn = UIButton(frame: CGRect(x: 0, y: 25, width: self.view.frame.width, height: 50))
     btn.backgroundColor = UIColor.cyanColor()
     btn.setTitle("Add new Dummy", forState: UIControlState.Normal)
-    btn.addTarget(self, action: "addDummyData", forControlEvents: UIControlEvents.TouchUpInside)
+    btn.addTarget(self, action: "getPosts", forControlEvents: UIControlEvents.TouchUpInside)
     self.view.addSubview(btn)
+  }
+
+  func getPosts() {
+    ApiClient.sharedInstance.getPosts { (posts) in
+      for post in posts! {
+        print("post body: \(post.body)")
+      }
+    }
   }
 
   func addDummyData() {

@@ -17,6 +17,7 @@
 		924F49C81CA64D72001ED9DC /* uliuli_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49C71CA64D72001ED9DC /* uliuli_appTests.swift */; };
 		924F49D31CA64D73001ED9DC /* uliuli_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F49D21CA64D72001ED9DC /* uliuli_appUITests.swift */; };
 		92525C4D1CA6530A00329A2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92525C4C1CA6530A00329A2A /* User.swift */; };
+		929FA7DF1CA6777C002189F4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FA7DE1CA6777C002189F4 /* Post.swift */; };
 		92E14E351CA6505F00796D69 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E14E341CA6505F00796D69 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		924F49D21CA64D72001ED9DC /* uliuli_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uliuli_appUITests.swift; sourceTree = "<group>"; };
 		924F49D41CA64D73001ED9DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92525C4C1CA6530A00329A2A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		929FA7DE1CA6777C002189F4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		92E14E341CA6505F00796D69 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		A142C2531AE2AFF4BF543A46 /* Pods_uliuli_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uliuli_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B424C7792AD9098568BA729D /* Pods-uliuli-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uliuli-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-uliuli-app/Pods-uliuli-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		924F49AF1CA64D72001ED9DC /* uliuli-app */ = {
 			isa = PBXGroup;
 			children = (
+				929FA7DD1CA67766002189F4 /* Model */,
 				924F49B01CA64D72001ED9DC /* AppDelegate.swift */,
 				924F49B21CA64D72001ED9DC /* FirstViewController.swift */,
 				924F49B41CA64D72001ED9DC /* SecondViewController.swift */,
@@ -125,8 +128,6 @@
 				924F49B91CA64D72001ED9DC /* Assets.xcassets */,
 				924F49BB1CA64D72001ED9DC /* LaunchScreen.storyboard */,
 				924F49BE1CA64D72001ED9DC /* Info.plist */,
-				92E14E341CA6505F00796D69 /* ApiClient.swift */,
-				92525C4C1CA6530A00329A2A /* User.swift */,
 			);
 			path = "uliuli-app";
 			sourceTree = "<group>";
@@ -147,6 +148,16 @@
 				924F49D41CA64D73001ED9DC /* Info.plist */,
 			);
 			path = "uliuli-appUITests";
+			sourceTree = "<group>";
+		};
+		929FA7DD1CA67766002189F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92525C4C1CA6530A00329A2A /* User.swift */,
+				929FA7DE1CA6777C002189F4 /* Post.swift */,
+				92E14E341CA6505F00796D69 /* ApiClient.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		92EE2784D8908B7010AE6ACB /* Pods */ = {
@@ -343,6 +354,7 @@
 				924F49B51CA64D72001ED9DC /* SecondViewController.swift in Sources */,
 				924F49B11CA64D72001ED9DC /* AppDelegate.swift in Sources */,
 				924F49B31CA64D72001ED9DC /* FirstViewController.swift in Sources */,
+				929FA7DF1CA6777C002189F4 /* Post.swift in Sources */,
 				92525C4D1CA6530A00329A2A /* User.swift in Sources */,
 				92E14E351CA6505F00796D69 /* ApiClient.swift in Sources */,
 			);
