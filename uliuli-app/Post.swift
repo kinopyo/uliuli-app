@@ -7,15 +7,21 @@
 //
 
 import SwiftyJSON
+import ObjectMapper
 
-class Post {
-  var body: String!
-  var imageUrl: String!
-  var userName: String!
+class Post: Mappable {
+  var body: String?
+  var imageUrl: String?
+  var userName: String?
 
-  required init(json: JSON) {
-    body = json["body"].stringValue
-    imageUrl = json["image"].stringValue
-    userName = json["user"]["name"].stringValue
+  required init?(_ map: Map) {
+
+  }
+
+  // Mappable
+  func mapping(_ map: Map) {
+    body     <- map["body"]
+    imageUrl <- map["image_url"]
+    userName <- map["user.name"]
   }
 }

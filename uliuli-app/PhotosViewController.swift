@@ -25,25 +25,25 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         print("post body: \(post.body)")
       }
 
-      dispatch_async(dispatch_get_main_queue(),{
+      DispatchQueue.main.async(execute: {
         self.tableView.reloadData()
       })
     }
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.items.count;
   }
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! photoCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! photoCell
 
-    let post = self.items[indexPath.row]
+    let post = self.items[(indexPath as NSIndexPath).row]
     cell.content.text = post.body
     cell.userName.text = post.userName
 
-    if let url = NSURL(string: post.imageUrl) {
-      if let data = NSData(contentsOfURL: url) {
+    if let url = URL(string: post.imageUrl!) {
+      if let data = try? Data(contentsOf: url) {
         cell.photo.image = UIImage(data: data)
       }
     }

@@ -8,9 +8,9 @@
 
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 
 typealias UserResponse = (User?) -> Void
-typealias PostsResponse = ([Post]?) -> Void
 
 class ApiClient: NSObject {
   static let sharedInstance = ApiClient()
@@ -18,7 +18,7 @@ class ApiClient: NSObject {
 //  let baseURL = "http://localhost:3002/api/v1/posts"
   let baseURL = "http://uliuli.kinopyo.com/api/v1/posts"
 
-  func getPosts(onComplete: PostsResponse) {
+  func getPosts(_ onComplete: @escaping ([Post]?) -> Void) {
     Alamofire.request(.GET, baseURL).responseJSON { response in
       guard response.result.isSuccess else {
         print("Error while fetching posts: \(response.result.error)")
@@ -29,15 +29,18 @@ class ApiClient: NSObject {
       if let data = response.result.value {
         let postsJson = JSON(data)["posts"]
         var ret = [Post]()
+
         for postJson in postsJson.arrayValue {
-          ret.append(Post(json: postJson))
+          if let post = Mapper<Post>().map(postJson.rawValue) {
+            ret.append(post)
+          }
         }
         onComplete(ret)
       }
     }
   }
 
-  func getRandomUser(onCompletion: UserResponse) {
+  func getRandomUser(_ onCompletion: @escaping UserResponse) {
     let endpoint = "http://api.randomuser.me/"
     Alamofire.request(.GET, endpoint)
       .responseJSON { response in
